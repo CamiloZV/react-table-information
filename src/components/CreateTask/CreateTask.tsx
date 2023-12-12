@@ -46,7 +46,12 @@ const CreateTask = ({ open, setOpen }: createTaskReq) => {
   return (
     <Modal open={open} onClose={handleClose}>
       <Box className='modal-container'>
-        <IconButton className='modal-close__icon' onClick={handleClose} sx={{ position: 'fixed' }}>
+        <IconButton
+          data-testid='close-icon'
+          className='modal-close__icon'
+          onClick={handleClose}
+          sx={{ position: 'fixed' }}
+        >
           <CloseIcon />
         </IconButton>
         <Typography id='modal-modal-title' variant='h4' component='h2'>
@@ -74,11 +79,13 @@ const CreateTask = ({ open, setOpen }: createTaskReq) => {
             label='Task title'
             sx={{ width: '98%' }}
             onChange={(e) => handleOnChange('title', e?.target?.value)}
+            id='task-title'
           />
           <TextField
             required
             value={newTaskData.type}
-            id='outlined-select-currency'
+            id='tak-type'
+            data-testid='tak-type'
             select
             label='Type'
             sx={{ width: '98%' }}
@@ -93,7 +100,8 @@ const CreateTask = ({ open, setOpen }: createTaskReq) => {
           </TextField>
           <TextField
             required
-            id='outlined-select-currency'
+            id='task-priority'
+            data-testid='task-priority'
             select
             label='Priority'
             value={newTaskData.priority}
@@ -109,7 +117,8 @@ const CreateTask = ({ open, setOpen }: createTaskReq) => {
           </TextField>
           <TextField
             required
-            id='outlined-multiline-static'
+            id='task.description'
+            data-testid='task.description'
             label='Description'
             multiline
             rows={4}
@@ -118,8 +127,9 @@ const CreateTask = ({ open, setOpen }: createTaskReq) => {
             onChange={(e) => handleOnChange('description', e?.target?.value)}
           />
           <TextField
-            id='outlined-number'
+            id='task-story-points'
             label='Story Points'
+            data-testid='Story Points'
             type='number'
             InputLabelProps={{
               shrink: true,

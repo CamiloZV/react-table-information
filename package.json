@@ -35,7 +35,8 @@
     "lint": "eslint src/**/*.{ts,tsx,json}",
     "lint:fix": "eslint --fix src/**/*.{ts,tsx,json}",
     "format": "prettier --write src/**/*.{ts,tsx,json} --config ./.prettierrc",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:coverage": "react-scripts test --coverage"
   },
   "browserslist": {
     "production": [
@@ -56,6 +57,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.0",
+    "msw": "^1.3.2",
     "prettier": "^3.1.0"
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import DataTable from './DataTable';
-import { mockColumns, mockRows } from '../../types';
 import { BrowserRouter } from 'react-router-dom';
 import * as router from 'react-router';
+import { mockColumns, mockRows } from '../../mocks';
 
 describe('data table test', () => {
   test('render the table component', () => {
