@@ -2,10 +2,16 @@ import React from 'react';
 import { Avatar, Box, Button, Typography } from '@mui/material';
 
 import './InspectTask.scss';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useGetAllTasksQuery } from '../../service';
+import { taskType } from '../../types';
 
 const InspecTask = () => {
   const navigate = useNavigate();
+  const { data } = useGetAllTasksQuery('');
+  const { id } = useParams();
+
+  const selectedTask = data?.find((task: taskType) => task.id === Number(id));
 
   const handlerOnGoBack = () => {
     navigate('/');
@@ -17,7 +23,7 @@ const InspecTask = () => {
         sx={{ py: '1rem', px: '0.5rem' }}
       >
         <Typography variant='subtitle1' sx={{ fontWeight: 600, letterSpacing: 1 }}>
-          #00000 - title
+          #{`${selectedTask?.id} ${selectedTask?.title}`}
         </Typography>
       </Box>
       <Button onClick={handlerOnGoBack} sx={{ width: '6rem' }}>
@@ -38,26 +44,29 @@ const InspecTask = () => {
         className='inspect-task__box inspect-task__mid-row '
       >
         <Typography>General information</Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '1rem',
+            justifyContent: 'space-between',
+          }}
+        >
           <Box>
             <Typography variant='h5'>Description</Typography>
-            <Typography variant='body1'>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis error nisi
-              reiciendis. Commodi ullam numquam a rem tempore, incidunt consequatur quam saepe,
-              nesciunt doloribus enim illo. Totam aliquam quia officiis.
-            </Typography>
+            <Typography variant='body1'>{selectedTask?.description}</Typography>
           </Box>
           <Box>
             <Typography variant='h5'>type</Typography>
-            <Typography variant='body1'>Issue</Typography>
+            <Typography variant='body1'>{selectedTask?.type}</Typography>
             <Typography variant='h5'>priority</Typography>
-            <Typography variant='body1'>mid</Typography>
+            <Typography variant='body1'>{selectedTask?.priority}</Typography>
             <Typography variant='h5'>storyPoints</Typography>
-            <Typography variant='body1'>0</Typography>
+            <Typography variant='body1'>{selectedTask?.storyPoints}</Typography>
           </Box>
         </Box>
       </Box>
-      <Box sx={{ flexBasis: '30%' }} className='inspect-task__box inspect-task__end-row'>
+      <Box sx={{ justifyContent: 'center' }} className='inspect-task__box inspect-task__end-row'>
         <Typography variant='h5' sx={{ mb: '1rem', borderBottom: '1px solid gray' }}>
           Activity log
         </Typography>
