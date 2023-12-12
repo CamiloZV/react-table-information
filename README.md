@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+## React FIT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project serves as a demonstration of my proficiency with React 18 and TypeScript, specifically created for a technical interview.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- React 18
+- Material-UI
+- RTK Query
+- Jest
+- MSW (Mock Service Worker)
+- ESLint
+- Prettier
+- Husky
 
-### `npm start`
+## Purpose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The primary goal of this project is to showcase my current abilities with React 18 and TypeScript. It includes a set of technologies commonly used in modern React development to highlight my skills in building scalable and maintainable applications.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Scripts
 
-### `npm test`
+# Build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- npm build
+  Builds the production-ready application.
 
-### `npm run build`
+# Test
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- npm run lint
+  Runs ESLint to check for linting issues.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Lint:Fix
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- npm run lint:fix
+  runs ESLint with the --fix option to automatically fix linting issues.
 
-### `npm run eject`
+# Format
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- npm run format
+  Runs Prettier to format code according to the configured rules.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Prepare
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- npm run prepare
+  Installs Husky hooks.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Test:Coverage
 
-## Learn More
+- npm run test:coverage
+  Runs Jest with coverage reporting.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Code Quality
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project follows the Airbnb style guide for maintaining code quality. ESLint and Prettier are configured to enforce coding standards, and Husky is set up to run pre-commit hooks to ensure code quality before each commit.
+
+## Api Calls
+
+RTK Query is used to manage API calls efficiently and handle data fetching and caching seamlessly.
