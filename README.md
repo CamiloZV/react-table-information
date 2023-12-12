@@ -1,4 +1,4 @@
-## React FIT
+# React FIT
 
 This project serves as a demonstration of my proficiency with React 18 and TypeScript, specifically created for a technical interview.
 
@@ -17,39 +17,39 @@ This project serves as a demonstration of my proficiency with React 18 and TypeS
 
 The primary goal of this project is to showcase my current abilities with React 18 and TypeScript. It includes a set of technologies commonly used in modern React development to highlight my skills in building scalable and maintainable applications.
 
-## Scripts
+# Scripts
 
-# Build
+## Build
 
 - npm build
 - Builds the production-ready application.
 
-# Test
+## Test
 
 - npm run lint
 - Runs ESLint to check for linting issues.
 
-# Lint:Fix
+## Lint:Fix
 
 - npm run lint:fix
 - runs ESLint with the --fix option to automatically fix linting issues.
 
-# Format
+## Format
 
 - npm run format
 - Runs Prettier to format code according to the configured rules.
 
-# Prepare
+## Prepare
 
 - npm run prepare
 - Installs Husky hooks.
 
-# Test:Coverage
+## Test:Coverage
 
 - npm run test:coverage
 - Runs Jest with coverage reporting.
 
-## Code Quality
+# Code Quality
 
 This project follows the Airbnb style guide for maintaining code quality. ESLint and Prettier are configured to enforce coding standards, and Husky is set up to run pre-commit hooks to ensure code quality before each commit.
 

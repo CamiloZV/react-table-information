@@ -3,7 +3,6 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from '../../context';
 import CreateTask from './CreateTask';
-import exp from 'constants';
 
 describe('Create task test', () => {
   test('render Create task', () => {

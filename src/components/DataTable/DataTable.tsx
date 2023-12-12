@@ -29,7 +29,10 @@ const DataTable = ({ columns, rows }: tableReq) => {
               <TableRow key={rowData.id.toString()} sx={{ cursor: 'pointer' }}>
                 {columns &&
                   columns.map((colData) => (
-                    <TableCell onClick={() => handlerOnRowClick(rowData.id)}>
+                    <TableCell
+                      key={`${rowData[colData.field]}-${rowData.id.toString()}`}
+                      onClick={() => handlerOnRowClick(rowData.id)}
+                    >
                       {rowData[colData.field]}
                     </TableCell>
                   ))}
