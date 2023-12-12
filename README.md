@@ -22,32 +22,32 @@ The primary goal of this project is to showcase my current abilities with React 
 # Build
 
 - npm build
-  Builds the production-ready application.
+- Builds the production-ready application.
 
 # Test
 
 - npm run lint
-  Runs ESLint to check for linting issues.
+- Runs ESLint to check for linting issues.
 
 # Lint:Fix
 
 - npm run lint:fix
-  runs ESLint with the --fix option to automatically fix linting issues.
+- runs ESLint with the --fix option to automatically fix linting issues.
 
 # Format
 
 - npm run format
-  Runs Prettier to format code according to the configured rules.
+- Runs Prettier to format code according to the configured rules.
 
 # Prepare
 
 - npm run prepare
-  Installs Husky hooks.
+- Installs Husky hooks.
 
 # Test:Coverage
 
 - npm run test:coverage
-  Runs Jest with coverage reporting.
+- Runs Jest with coverage reporting.
 
 ## Code Quality
 
