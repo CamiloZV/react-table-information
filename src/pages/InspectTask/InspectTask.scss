@@ -1,0 +1,39 @@
+.inspect-task--container {
+  display: grid;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+}
+
+.inspect-task__full-row {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.inspect-task__mid-row {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.inspect-task__end-row {
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.inspect-task--title-container {
+  border-bottom: 1px solid gray;
+  text-align: left;
+}
+
+.inspect-task--information-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.inspect-task__box {
+  border: 1px solid rgb(149, 146, 146);
+  background-color: rgb(236, 237, 237);
+  padding: 1rem;
+}

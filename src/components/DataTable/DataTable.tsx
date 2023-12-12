@@ -1,8 +1,15 @@
 import React from 'react';
 import { tableReq } from '../../types';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const DataTable = ({ columns, rows }: tableReq) => {
+  const navigate = useNavigate();
+
+  const handlerOnRowClick = (id: number) => {
+    navigate(`/inspect/${id}`);
+  };
+
   return (
     <TableContainer sx={{ height: '100%', overflowY: 'scroll' }}>
       <Table>
@@ -21,7 +28,11 @@ const DataTable = ({ columns, rows }: tableReq) => {
             rows.map((rowData) => (
               <TableRow key={rowData.id.toString()} sx={{ cursor: 'pointer' }}>
                 {columns &&
-                  columns.map((colData) => <TableCell>{rowData[colData.field]}</TableCell>)}
+                  columns.map((colData) => (
+                    <TableCell onClick={() => handlerOnRowClick(rowData.id)}>
+                      {rowData[colData.field]}
+                    </TableCell>
+                  ))}
               </TableRow>
             ))}
         </TableBody>
