@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+# Local development build
+build/
+# Production build
+dist/
+# IDE and editor files
+.idea/
+.vscode/
+# ESLint cache
+.eslintcache
+# Prettier cache
+.prettier-cache
+# Husky hooks
+.husky/
+# Dependency lock files
+yarn.lock
+package-lock.json
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
